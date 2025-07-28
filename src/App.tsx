@@ -1,10 +1,10 @@
 import { Container } from './components/Container';
-import { Heading } from './components/Heading';
 import { Logo } from './components/Logo';
 
 import './styles/theme.css';
 import './styles/global.css';
 import { Menu } from './components/Menu';
+import { CountDown } from './components/CountDown';
 
 export function App() {
   return (
@@ -12,14 +12,34 @@ export function App() {
       <Container>
         <Logo />
       </Container>
+
       <Container>
         <Menu />
       </Container>
+
       <Container>
-        <Heading>FORM</Heading>
+        <CountDown />
       </Container>
+
       <Container>
-        <Heading>FOOTER</Heading>
+        <form className='form' action=''>
+          <div className='formRow'>
+            <label htmlFor='input'>task</label>
+            <input id='input' type='text' />
+          </div>
+
+          <div className='formRow'>
+            <p>Lorem ipsum dolor sit amet.</p>
+          </div>
+
+          <div className='formRow'>
+            <p>Ciclos</p>
+          </div>
+
+          <div className='formRow'>
+            <button>Enviar</button>
+          </div>
+        </form>
       </Container>
     </>
   );
