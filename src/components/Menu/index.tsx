@@ -8,6 +8,7 @@ import {
 
 import styles from './styles.module.css';
 import { useEffect, useState } from 'react';
+import RouterLink from '../RouterLink';
 
 type AvailableThemes = 'dark' | 'light';
 
@@ -38,31 +39,31 @@ export function Menu() {
 
   return (
     <nav className={styles.menu}>
-      <a
+      <RouterLink
         href='/'
         className={styles.menuLink}
         aria-label='Ir para a Home'
         title='Ir para a Home'
       >
         <HouseIcon />
-      </a>
-      <a
+      </RouterLink>
+      <RouterLink
         href='#'
         className={styles.menuLink}
         aria-label='Ver histórico'
         title='Ver histórico'
       >
         <HistoryIcon />
-      </a>
-      <a
+      </RouterLink>
+      <RouterLink
         href='#'
         className={styles.menuLink}
         aria-label='Configurações'
         title='Configurações'
       >
         <SettingsIcon />
-      </a>
-      <a
+      </RouterLink>
+      <RouterLink
         href='#'
         className={styles.menuLink}
         aria-label='Mudar tema'
@@ -70,7 +71,7 @@ export function Menu() {
         onClick={handleThemeChange}
       >
         {nextThemeIcon[theme]}
-      </a>
+      </RouterLink>
     </nav>
   );
 }
